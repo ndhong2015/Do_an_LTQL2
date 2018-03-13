@@ -1,0 +1,35 @@
+{
+    "Ten": "Gà nướng dứa",
+    "Ma_so": "PIAZZA_4",
+    "Don_gia_Ban": 89000,
+    "Nhom_San_pham": {
+        "Ten": "Piazza",
+        "Ma_so": "PIAZZA",
+        "Phan_loai": [
+            {
+                "Ten": "Truyền thống",
+                "Ma_so": "TRUYEN_THONG"
+            }
+        ]
+    },
+    "Danh_sach_Ban_hang": [
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        }
+    ]    
+}

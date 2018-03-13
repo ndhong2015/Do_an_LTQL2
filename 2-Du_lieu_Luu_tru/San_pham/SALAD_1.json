@@ -1,0 +1,32 @@
+{
+    "Ten": "Salad Trộn dầu giấm, muối và tiêu",
+    "Ma_so": "SALAD_1",
+    "Don_gia_Ban": 49000,    
+    "Nhom_San_pham": {
+        "Ten": "Salad",
+        "Ma_so": "SALAD",
+        "Phan_loai": [
+                   
+        ]
+    },
+    "Danh_sach_Ban_hang": [
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 49000,
+            "So_luong": 1,
+            "Tien": 49000
+        },
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 49000,
+            "So_luong": 1,
+            "Tien": 49000
+        },
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 49000,
+            "So_luong": 1,
+            "Tien": 49000
+        }
+    ]    
+}

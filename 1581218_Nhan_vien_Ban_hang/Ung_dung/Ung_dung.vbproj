@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1-Man_hinh_Giao_dien\MH_Ban_San_pham.Designer.vb">
+      <DependentUpon>MH_Ban_San_pham.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1-Man_hinh_Giao_dien\MH_Ban_San_pham.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="1-Man_hinh_Giao_dien\MH_Chinh.designer.vb">
       <DependentUpon>MH_Chinh.vb</DependentUpon>
     </Compile>
@@ -85,16 +91,10 @@
     <Compile Include="1-Man_hinh_Giao_dien\MH_Dang_nhap.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1-Man_hinh_Giao_dien\MH_Ban_Tivi.designer.vb">
-      <DependentUpon>MH_Ban_Tivi.vb</DependentUpon>
+    <Compile Include="1-Man_hinh_Giao_dien\MH_Xem_Danh_sach_San_pham.designer.vb">
+      <DependentUpon>MH_Xem_Danh_sach_San_pham.vb</DependentUpon>
     </Compile>
-    <Compile Include="1-Man_hinh_Giao_dien\MH_Ban_Tivi.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="1-Man_hinh_Giao_dien\MH_Xem_Danh_sach_Tivi.designer.vb">
-      <DependentUpon>MH_Xem_Danh_sach_Tivi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="1-Man_hinh_Giao_dien\MH_Xem_Danh_sach_Tivi.vb">
+    <Compile Include="1-Man_hinh_Giao_dien\MH_Xem_Danh_sach_San_pham.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="3-Doi_tuong_va_Xu_ly\Mo_hinh_Doi_tuong.vb" />
@@ -122,11 +122,8 @@
     <EmbeddedResource Include="1-Man_hinh_Giao_dien\MH_Dang_nhap.resx">
       <DependentUpon>MH_Dang_nhap.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1-Man_hinh_Giao_dien\MH_Ban_Tivi.resx">
-      <DependentUpon>MH_Ban_Tivi.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="1-Man_hinh_Giao_dien\MH_Xem_Danh_sach_Tivi.resx">
-      <DependentUpon>MH_Xem_Danh_sach_Tivi.vb</DependentUpon>
+    <EmbeddedResource Include="1-Man_hinh_Giao_dien\MH_Xem_Danh_sach_San_pham.resx">
+      <DependentUpon>MH_Xem_Danh_sach_San_pham.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

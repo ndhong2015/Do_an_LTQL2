@@ -1,5 +1,4 @@
 ﻿Public Class MH_Dang_nhap
-    Dim Thu_nghiem As Boolean = True
     Dim Luu_tru As New XL_LUU_TRU
     Dim Du_lieu As XL_DU_LIEU = Luu_tru.Doc_Du_lieu
     Dim Danh_sach_Nguoi_dung As List(Of XL_NHAN_VIEN_BAN_HANG) = Du_lieu.Cua_hang.Danh_sach_Nhan_vien_Ban_hang

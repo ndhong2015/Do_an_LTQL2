@@ -34,22 +34,17 @@ Public Class XL_THE_HIEN
 End Class
 '**************** Xử lý Nghiệp vụ  *******************
 Public Class XL_NGHIEP_VU
-    Public Function Tra_cuu_Tivi(Chuoi_Tra_cuu As String, Danh_sach_Tivi As List(Of XL_TIVI)) As List(Of XL_TIVI)
+    Public Function Tra_cuu_San_pham(Chuoi_Tra_cuu As String, Danh_sach_San_pham As List(Of XL_SAN_PHAM)) As List(Of XL_SAN_PHAM)
         Chuoi_Tra_cuu = Chuoi_Tra_cuu.ToUpper
-        Dim Danh_sach = Danh_sach_Tivi.FindAll(
-            Function(Tivi)
-                Return Tivi.Ten.ToString.ToUpper.Contains(Chuoi_Tra_cuu)
+        Dim Danh_sach = Danh_sach_San_pham.FindAll(
+            Function(San_pham)
+                Return San_pham.Ten.ToString.ToUpper.Contains(Chuoi_Tra_cuu)
             End Function)
         Return Danh_sach
     End Function
-    Public Function Tinh_So_luong_Ton_Tivi(Tivi As XL_TIVI) As Long
-        Dim Tong_Ban = Tivi.Danh_sach_Ban_hang.Sum(Function(Ban_hang) Ban_hang.So_luong)
-        Dim Tong_Nhap = Tivi.Danh_sach_Nhap_hang.Sum(Function(Nhap_hang) Nhap_hang.So_luong)
-        Return Tong_Nhap - Tong_Ban
-    End Function
-    Public Function Tinh_Doanh_thu_Ngay_Hien_hanh_Tivi(Tivi As XL_TIVI) As Long
+    Public Function Tinh_Doanh_thu_Ngay_Hien_hanh_San_pham(San_pham As XL_SAN_PHAM) As Long
         Dim Ngay_Hien_hanh = DateTime.Today
-        Dim Danh_sach_Ban_hang_cua_Ngay_Hien_hanh = Tivi.Danh_sach_Ban_hang.FindAll(
+        Dim Danh_sach_Ban_hang_cua_Ngay_Hien_hanh = San_pham.Danh_sach_Ban_hang.FindAll(
             Function(Ban_hang) Ban_hang.Ngay.Day = Ngay_Hien_hanh.Day _
                                     AndAlso Ban_hang.Ngay.Month = Ngay_Hien_hanh.Month _
                                     AndAlso Ban_hang.Ngay.Year = Ngay_Hien_hanh.Year)
@@ -65,16 +60,16 @@ Public Class XL_LUU_TRU
 
     Dim Thu_muc_Du_lieu As DirectoryInfo = Thu_muc_Project.Parent.Parent.GetDirectories("2-Du_lieu_Luu_tru")(0)
     Dim Thu_muc_Cua_hang As DirectoryInfo = Thu_muc_Du_lieu.GetDirectories("Cua_hang")(0)
-    Dim Thu_muc_Tivi As DirectoryInfo = Thu_muc_Du_lieu.GetDirectories("Tivi")(0)
+    Dim Thu_muc_San_pham As DirectoryInfo = Thu_muc_Du_lieu.GetDirectories("San_pham")(0)
 
     Dim Thu_muc_Media As DirectoryInfo = Thu_muc_Project.Parent.Parent.GetDirectories("Media")(0)
-    Dim Kieu_Hinh As String = ".png"
+    Dim Kieu_Hinh As String = ".jpg"
 #Region "Xử lý Đọc"
 
     Public Function Doc_Du_lieu() As XL_DU_LIEU ' Chưa xử lý Caching
         Dim Kq As New XL_DU_LIEU
         Kq.Cua_hang = Doc_Danh_sach_Cua_hang()(0)
-        Kq.Danh_sach_Tivi = Doc_Danh_sach_Tivi()
+        Kq.Danh_sach_San_pham = Doc_Danh_sach_San_pham()
         Return Kq
     End Function
     Function Doc_Danh_sach_Cua_hang() As List(Of XL_CUA_HANG)
@@ -87,18 +82,21 @@ Public Class XL_LUU_TRU
             End Sub)
         Return Danh_sach
     End Function
-    Function Doc_Danh_sach_Tivi() As List(Of XL_TIVI)
-        Dim Danh_sach As New List(Of XL_TIVI)
-        Thu_muc_Tivi.GetFiles("*.json").ToList.ForEach(
+    Function Doc_Danh_sach_San_pham() As List(Of XL_SAN_PHAM)
+        Dim Danh_sach As New List(Of XL_SAN_PHAM)
+        Thu_muc_San_pham.GetFiles("*.json").ToList.ForEach(
             Sub(Tap_tin)
                 Dim Chuoi_JSON = File.ReadAllText(Tap_tin.FullName)
-                Dim Cua_hang = JsonConvert.DeserializeObject(Of XL_TIVI)(Chuoi_JSON)
-                Danh_sach.Add(Cua_hang)
+                Dim San_pham = JsonConvert.DeserializeObject(Of XL_SAN_PHAM)(Chuoi_JSON)
+                Danh_sach.Add(San_pham)
             End Sub)
         Return Danh_sach
     End Function
     Public Function Doc_Nhi_phan_Hinh(Ma_so As String) As Byte()
         Dim Kq As Byte()
+        If Ma_so.Contains("NV") Or Ma_so.Contains("PET") Then
+            Kieu_Hinh = ".png"
+        End If
         Dim Duong_dan = Thu_muc_Media.FullName & "\" & Ma_so & Kieu_Hinh
         Kq = System.IO.File.ReadAllBytes(Duong_dan)
         Return Kq
@@ -106,19 +104,19 @@ Public Class XL_LUU_TRU
 #End Region
 
 #Region "Xử lý Ghi"
-    Public Function Ghi_Ban_hang_Moi(Tivi As XL_TIVI, Ban_hang As XL_BAN_HANG) As String
+    Public Function Ghi_Ban_hang_Moi(San_pham As XL_SAN_PHAM, Ban_hang As XL_BAN_HANG) As String
         Dim Kq As String = ""
-        Tivi.Danh_sach_Ban_hang.Add(Ban_hang)
+        San_pham.Danh_sach_Ban_hang.Add(Ban_hang)
         Try
-            Dim Duong_dan = Thu_muc_Tivi.FullName & "\" & Tivi.Ma_so & ".json"
-            Dim Chuoi_JSON = JsonConvert.SerializeObject(Tivi)
+            Dim Duong_dan = Thu_muc_San_pham.FullName & "\" & San_pham.Ma_so & ".json"
+            Dim Chuoi_JSON = JsonConvert.SerializeObject(San_pham)
             File.WriteAllText(Duong_dan, Chuoi_JSON)
             Kq = "OK"
         Catch Loi As Exception
             Kq = Loi.Message
         End Try
         If Kq <> "OK" Then
-            Tivi.Danh_sach_Ban_hang.Remove(Ban_hang)
+            San_pham.Danh_sach_Ban_hang.Remove(Ban_hang)
         End If
         Return Kq
     End Function
