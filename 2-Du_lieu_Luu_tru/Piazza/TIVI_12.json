@@ -1,0 +1,19 @@
+{
+    "Ten": "Piazza 12",
+    "Ma_so": "Piazza_12",
+    "Don_gia_Nhap": 4580000,
+    "Don_gia_Ban": 5780000,
+    "Nhom_Tivi": {
+        "Ten": "Piazza 12",
+        "Ma_so": "Piazza 12"
+    },
+    "Danh_sach_Nhap_hang": [
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 4580000,
+            "So_luong": 30,
+            "Tien": 137400000
+        }
+    ],
+    "Danh_sach_Ban_hang": []
+}

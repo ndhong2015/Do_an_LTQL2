@@ -1,0 +1,26 @@
+{
+    "Ten": "Piazza 18",
+    "Ma_so": "Piazza_18",
+    "Don_gia_Nhap": 8520000,
+    "Don_gia_Ban": 10420000,
+    "Nhom_Tivi": {
+        "Ten": "Piazza 18",
+        "Ma_so": "Piazza 18"
+    },
+    "Danh_sach_Ban_hang": [
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 8520000,
+            "So_luong": 1,
+            "Tien": 8520000
+        }
+    ],
+    "Danh_sach_Nhap_hang": [
+        {
+            "Ngay": "2017-12-27T00:00:00+07:00",
+            "Don_gia": 8520000,
+            "So_luong": 34,
+            "Tien": 289680000
+        }
+    ]
+}

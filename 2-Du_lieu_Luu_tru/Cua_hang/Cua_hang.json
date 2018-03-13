@@ -1,0 +1,93 @@
+{
+    "Ten": "Ban_Piazza",
+    "Ma_so": "Ban_Piazza",
+    "Dien_thoai": "84-01868886989",
+    "Dia_chi": "827/42 Tỉnh Lộ 10,Q.Bình Tân",
+    "Mail": "huynhtrang.binh@gmail.com",
+    "Danh_sach_Nhom_Piazza": [
+        {
+            "Ten": "Piazza 1",
+            "Ma_so": "Piazza 1"
+        },
+        {
+            "Ten": "Piazza 2",
+            "Ma_so": "Piazza 2"
+        },
+        {
+            "Ten": "Piazza 3",
+            "Ma_so": "Piazza 3"
+        },
+        {
+            "Ten": "Piazza 4",
+            "Ma_so": "Piazza 4"
+        }
+    ],
+    "Danh_sach_Nhan_vien_Nhap_hang": [
+        {
+            "Ho_ten": "Nguyễn thị Thanh",
+            "Ma_so": "NV_1",
+            "Ten_dang_nhap": "NV_1",
+            "Mat_khau": "NV_1"
+        }
+    ],
+    "Danh_sach_Nhan_vien_Ban_hang": [
+        {
+            "Ho_ten": "Tô thị Hảo",
+            "Ma_so": "NV_2",
+            "Ten_dang_nhap": "NV_2",
+            "Mat_khau": "NV_2",
+            "Danh_sach_Nhom_Piazza": [
+                {
+                    "Ten": "Piazza 1",
+                    "Ma_so": "Piazza 1"
+                },
+                {
+                    "Ten": "Piazza 2",
+                    "Ma_so": "Piazza 2"
+                }
+            ]
+        },
+        {
+            "Ho_ten": "Nguyên văn Thành",
+            "Ma_so": "NV_3",
+            "Ten_dang_nhap": "NV_3",
+            "Mat_khau": "NV_3",
+            "Danh_sach_Nhom_Piazza": [
+                {
+                    "Ten": "Piazza 3",
+                    "Ma_so": "Piazza 3"
+                },
+                {
+                    "Ten": "Piazza 4",
+                    "Ma_so": "Piazza 4"
+                }
+            ]
+        }
+    ],
+
+    "Danh_sach_Quan_ly_Nhap_hang": [
+        {
+            "Ho_ten": "Trần văn Nga",
+            "Ma_so": "NV_4",
+            "Ten_dang_nhap": "QL_1",
+            "Mat_khau": "QL_1"
+        }
+    ],
+    "Danh_sach_Quan_ly_Ban_hang": [
+        {
+            "Ho_ten": "Trần thị Mai",
+            "Ma_so": "NV_5",
+            "Ten_dang_nhap": "QL_2",
+            "Mat_khau": "QL_2"
+        }
+    ],
+    "Danh_sach_Quan_ly_Cua_hang": [
+        {
+            "Ho_ten": "Lê văn Hòa",
+            "Ma_so": "NV_6",
+            "Ten_dang_nhap": "QL",
+            "Mat_khau": "QL"
+        }
+    ]
+
+}
