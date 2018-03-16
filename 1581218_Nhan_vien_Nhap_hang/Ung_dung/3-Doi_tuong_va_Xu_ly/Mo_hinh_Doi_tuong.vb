@@ -44,8 +44,8 @@ End Class
 '****** Đối tượng Quản lý Chính 
 Public Class XL_SAN_PHAM
     Public Ten, Ma_so As String
-    Public Don_gia_Ban As Long
     Public Don_gia_Nhap As Long
+    Public Don_gia_Ban As Long
     Public Nhom_San_pham As New XL_NHOM_SAN_PHAM()
     Public Danh_sach_Nhap_hang As New List(Of XL_NHAP_HANG)
     Public Danh_sach_Ban_hang As New List(Of XL_BAN_HANG)

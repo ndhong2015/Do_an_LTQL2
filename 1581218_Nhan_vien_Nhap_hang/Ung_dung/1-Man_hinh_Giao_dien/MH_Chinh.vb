@@ -20,7 +20,8 @@
            Sub(Th, Bien_co)
                If Bien_co.KeyCode = Keys.Enter Then
                    Dim Chuoi_Tra_cuu As String = Th_Chuoi_Tra_cuu.Text.Trim
-                   Danh_sach_San_pham_Xem = Nghiep_vu.Tra_cuu_San_pham(Chuoi_Tra_cuu, Danh_sach_San_pham)
+                   Du_lieu = Luu_tru.Doc_Du_lieu
+                   Danh_sach_San_pham_Xem = Nghiep_vu.Tra_cuu_San_pham(Chuoi_Tra_cuu, Du_lieu.Danh_sach_San_pham)
                    Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham_Xem)
                End If
            End Sub
@@ -33,8 +34,4 @@
         Mh.Dock = DockStyle.Fill
         Khung_Chuc_nang.Controls.Add(Mh)
     End Sub
-
-
-
-
 End Class

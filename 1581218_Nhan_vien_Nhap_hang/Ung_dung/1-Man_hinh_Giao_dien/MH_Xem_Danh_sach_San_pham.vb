@@ -3,6 +3,7 @@
     Dim The_hien As New XL_THE_HIEN
     Dim Nghiep_vu As New XL_NGHIEP_VU
     Dim Luu_tru As New XL_LUU_TRU
+    Dim Du_lieu As XL_DU_LIEU = Luu_tru.Doc_Du_lieu
     Dim Danh_sach_San_pham As List(Of XL_SAN_PHAM)
     Dim Tai_lieu As HtmlDocument
     Private Sub MH_Xem_Danh_sach_San_pham_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -35,8 +36,8 @@
 
                 Dim Chuoi_Thong_tin As String = $"<div Class='text-left float-left' style='width:65%;height:100%;margin-left:10px;'> " +
                                     $"{ Ten}" +
-                                     $"<br />Đơn giá nhập {  Don_gia_Nhap.ToString("n0", Dinh_dang_VN) }" +
-                                     $"<br /><i><b>Số lượng Tồn {  So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
+                                     $"<br />Đơn giá nhập {Don_gia_Nhap.ToString("n0", Dinh_dang_VN) }" +
+                                     $"<br /><i><b>Số lượng Tồn {So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
                                      $"</div>"
                 Dim Chuoi_HTML As String = $"<div class='float-left' style='width:320px;height:150px;margin-bottom:10px;margin-left:10px;{Dinh_dang_Trang_thai}' >" +
                                $"{Chuoi_Hinh}" + $"{Chuoi_Thong_tin}" +
@@ -46,7 +47,7 @@
                 Tai_lieu.Body.AppendChild(Th_San_pham)
                 AddHandler Th_San_pham.Click,
                        Sub()
-                           Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham, Danh_sach_San_pham)
+                           Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham, Du_lieu.Danh_sach_San_pham)
                        End Sub
             End Sub)
     End Sub
@@ -54,7 +55,7 @@
         Dim Khung_Chuc_nang As Control = Me.Parent
         Khung_Chuc_nang.Controls.Clear()
         Dim Mh = New MH_Nhap_San_pham()
-        Mh.Khoi_dong(San_pham, Danh_sach_San_pham)
+        Mh.Khoi_dong(San_pham)
         Mh.Dock = DockStyle.Fill
         Khung_Chuc_nang.Controls.Add(Mh)
     End Sub

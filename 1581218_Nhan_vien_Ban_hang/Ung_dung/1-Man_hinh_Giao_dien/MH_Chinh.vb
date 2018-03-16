@@ -20,22 +20,31 @@
                 End If
             End Sub)
         Dim Danh_sach_San_pham_Xem = Danh_sach_San_pham
-        Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham_Xem)
+        Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham_Xem, Nguoi_dung)
 
         AddHandler Th_Chuoi_Tra_cuu.KeyDown,
            Sub(Th, Bien_co)
                If Bien_co.KeyCode = Keys.Enter Then
                    Dim Chuoi_Tra_cuu As String = Th_Chuoi_Tra_cuu.Text.Trim
-                   Danh_sach_San_pham_Xem = Nghiep_vu.Tra_cuu_San_pham(Chuoi_Tra_cuu, Danh_sach_San_pham)
-                   Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham_Xem)
+                   Du_lieu = Luu_tru.Doc_Du_lieu
+                   Dim Danh_sach_San_pham_lam_moi = New List(Of XL_SAN_PHAM)
+                   Du_lieu.Danh_sach_San_pham.ForEach(
+                    Sub(San_pham)
+                        Dim Duoc_Phan_quyen = Nguoi_dung.Danh_sach_Nhom_San_pham.Any(Function(Nhom_San_pham) Nhom_San_pham.Ma_so = San_pham.Nhom_San_pham.Ma_so)
+                        If Duoc_Phan_quyen Then
+                            Danh_sach_San_pham_lam_moi.Add(San_pham)
+                        End If
+                    End Sub)
+                   Danh_sach_San_pham_Xem = Nghiep_vu.Tra_cuu_San_pham(Chuoi_Tra_cuu, Danh_sach_San_pham_lam_moi)
+                   Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham_Xem, Nguoi_dung)
                End If
            End Sub
     End Sub
 
-    Sub Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham As List(Of XL_SAN_PHAM))
+    Sub Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham As List(Of XL_SAN_PHAM), Nguoi_dung As XL_NHAN_VIEN_BAN_HANG)
         Khung_Chuc_nang.Controls.Clear()
         Dim Mh = New MH_Xem_Danh_sach_San_pham()
-        Mh.Khoi_dong(Danh_sach_San_pham)
+        Mh.Khoi_dong(Danh_sach_San_pham, Nguoi_dung)
         Mh.Dock = DockStyle.Fill
         Khung_Chuc_nang.Controls.Add(Mh)
     End Sub

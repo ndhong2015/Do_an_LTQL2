@@ -1,6 +1,7 @@
 {
     "Ten": "Hải sản cao cấp",
     "Ma_so": "PIAZZA_7",
+    "Don_gia_Nhap": 50000,
     "Don_gia_Ban": 109000,
     "Nhom_San_pham": {
         "Ten": "Piazza",
@@ -12,6 +13,7 @@
             }
         ]
     },    
+    "Danh_sach_Nhap_hang": [],
     "Danh_sach_Ban_hang": [
         {
             "Ngay": "2018-01-10T00:00:00+07:00",

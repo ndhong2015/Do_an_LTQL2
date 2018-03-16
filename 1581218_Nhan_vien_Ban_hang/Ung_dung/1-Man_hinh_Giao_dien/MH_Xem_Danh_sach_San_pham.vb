@@ -3,8 +3,10 @@
     Dim The_hien As New XL_THE_HIEN
     Dim Nghiep_vu As New XL_NGHIEP_VU
     Dim Luu_tru As New XL_LUU_TRU
+    Dim Du_lieu As XL_DU_LIEU = Luu_tru.Doc_Du_lieu
     Dim Danh_sach_San_pham As List(Of XL_SAN_PHAM)
     Dim Tai_lieu As HtmlDocument
+    Dim Nguoi_dung As XL_NHAN_VIEN_BAN_HANG
     Private Sub MH_Xem_Danh_sach_San_pham_Load(sender As Object, e As EventArgs) Handles Me.Load
         AddHandler Trinh_duyet.DocumentCompleted,
             Sub()
@@ -15,8 +17,9 @@
             End Sub
         Trinh_duyet.DocumentStream = Nothing
     End Sub
-    Sub Khoi_dong(Danh_sach_San_pham_Xem As List(Of XL_SAN_PHAM))
+    Sub Khoi_dong(Danh_sach_San_pham_Xem As List(Of XL_SAN_PHAM), Nguoi_dung As XL_NHAN_VIEN_BAN_HANG)
         Danh_sach_San_pham = Danh_sach_San_pham_Xem
+        Me.Nguoi_dung = Nguoi_dung
     End Sub
     Sub Xuat_Danh_sach_San_pham()
         Danh_sach_San_pham.ForEach(
@@ -48,15 +51,15 @@
                 Tai_lieu.Body.AppendChild(Th_San_pham)
                 AddHandler Th_San_pham.Click,
                        Sub()
-                           Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham, Danh_sach_San_pham)
+                           Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham, Nguoi_dung)
                        End Sub
             End Sub)
     End Sub
-    Sub Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham As XL_SAN_PHAM, Danh_sach_San_pham As List(Of XL_SAN_PHAM))
+    Sub Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham As XL_SAN_PHAM, Nguoi_dung As XL_NHAN_VIEN_BAN_HANG)
         Dim Khung_Chuc_nang As Control = Me.Parent
         Khung_Chuc_nang.Controls.Clear()
         Dim Mh = New MH_Ban_San_pham()
-        Mh.Khoi_dong(San_pham, Danh_sach_San_pham)
+        Mh.Khoi_dong(San_pham, Nguoi_dung)
         Mh.Dock = DockStyle.Fill
         Khung_Chuc_nang.Controls.Add(Mh)
     End Sub
