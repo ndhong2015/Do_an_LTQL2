@@ -1,6 +1,7 @@
 {
     "Ten": "Ba loại thịt thập cẩm và rau củ",
     "Ma_so": "PIAZZA_6",
+    "Don_gia_Nhap": 50000,
     "Don_gia_Ban": 99000,
     "Nhom_San_pham": {
         "Ten": "Piazza",
@@ -12,6 +13,7 @@
             }
         ]
     },
+    "Danh_sach_Nhap_hang": [],
     "Danh_sach_Ban_hang": [
         {
             "Ngay": "2018-01-10T00:00:00+07:00",

@@ -1,6 +1,7 @@
 {
     "Ten": "Aloha",
-    "Ma_so": "PIAZZA_5",
+    "Ma_so": "PIAZZA_5",   
+    "Don_gia_Nhap": 50000,
     "Don_gia_Ban": 99000,
     "Nhom_San_pham": {
         "Ten": "Piazza",

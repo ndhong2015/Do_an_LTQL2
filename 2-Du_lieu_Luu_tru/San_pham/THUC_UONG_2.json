@@ -1,1 +1,51 @@
-{"Ten":"7up","Ma_so":"THUC_UONG_2","Don_gia_Nhap": 10000,"Don_gia_Ban":15000,"Nhom_San_pham":{"Ten":"Thức uống","Ma_so":"THUC_UONG","Phan_loai":[]},"Danh_sach_Nhap_hang":[],"Danh_sach_Ban_hang":[{"Ngay":"2018-01-10T00:00:00+07:00","Don_gia":15000,"So_luong":1,"Tien":15000},{"Ngay":"2018-01-10T00:00:00+07:00","Don_gia":15000,"So_luong":1,"Tien":15000},{"Ngay":"2018-01-10T00:00:00+07:00","Don_gia":15000,"So_luong":1,"Tien":15000},{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":15000,"So_luong":2,"Tien":30000},{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":15000,"So_luong":1,"Tien":15000}]}
+{
+    "Ten": "7up",
+    "Ma_so": "THUC_UONG_2",
+    "Don_gia_Nhap": 10000,
+    "Don_gia_Ban": 15000,
+    "Nhom_San_pham": {
+        "Ten": "Thức uống",
+        "Ma_so": "THUC_UONG",
+        "Phan_loai": []
+    },
+    "Danh_sach_Nhap_hang": [
+        {
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 15000,
+            "So_luong": 10,
+            "Tien": 150000
+        }
+    ],
+    "Danh_sach_Ban_hang": [
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 15000,
+            "So_luong": 1,
+            "Tien": 15000
+        },
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 15000,
+            "So_luong": 1,
+            "Tien": 15000
+        },
+        {
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 15000,
+            "So_luong": 1,
+            "Tien": 15000
+        },
+        {
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 15000,
+            "So_luong": 2,
+            "Tien": 30000
+        },
+        {
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 15000,
+            "So_luong": 1,
+            "Tien": 15000
+        }
+    ]
+}
