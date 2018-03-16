@@ -29,6 +29,9 @@
                 Dim Don_gia_Ban = San_pham.Don_gia_Ban
                 Dim So_luong_Ton As Long = Nghiep_vu.Tinh_So_luong_Ton_San_pham(San_pham)
                 Dim Doanh_thu As Long = Nghiep_vu.Tinh_Doanh_thu_Ngay_Hien_hanh_San_pham(San_pham)
+                Dim Doanh_thu_Thang As Long = Nghiep_vu.Tinh_Doanh_thu_Thang_Hien_hanh_San_pham(San_pham)
+                Dim Doanh_thu_Nam As Long = Nghiep_vu.Tinh_Doanh_thu_Nam_Hien_hanh_San_pham(San_pham)
+
                 Dim Dinh_dang_Trang_thai As String = ""
                 Dim Chuoi_64 As String = Luu_tru.Doc_Chuoi_64(San_pham.Ma_so)
                 If (So_luong_Ton <= 0) Then
@@ -42,6 +45,8 @@
                                      $"<br />Đơn giá Bán {  Don_gia_Ban.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br /><i><b>Số lượng Tồn {  So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
                                      $"<br />Doanh thu {  Doanh_thu.ToString("n0", Dinh_dang_VN) }" +
+                                     $"<br />Doanh thu tháng {  Doanh_thu_Thang.ToString("n0", Dinh_dang_VN) }" +
+                                     $"<br />Doanh thu năm {  Doanh_thu_Nam.ToString("n0", Dinh_dang_VN) }" +
                                      $"</div>"
                 Dim Chuoi_HTML As String = $"<div class='float-left' style='width:320px;height:150px;margin-bottom:10px;margin-left:10px;{Dinh_dang_Trang_thai}' >" +
                                $"{Chuoi_Hinh}" + $"{Chuoi_Thong_tin}" +

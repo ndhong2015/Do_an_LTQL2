@@ -51,6 +51,54 @@ Public Class XL_NGHIEP_VU
         Dim Doanh_thu = Danh_sach_Ban_hang_cua_Ngay_Hien_hanh.Sum(Function(Ban_hang) Ban_hang.Tien)
         Return Doanh_thu
     End Function
+    Public Function Tinh_Doanh_thu_Thang_Hien_hanh_San_pham(San_pham As XL_SAN_PHAM) As Long
+        Dim Ngay_Hien_hanh = DateTime.Today
+        Dim Danh_sach_Ban_hang_cua_Thang_Hien_hanh = San_pham.Danh_sach_Ban_hang.FindAll(
+            Function(Ban_hang) Ban_hang.Ngay.Month = Ngay_Hien_hanh.Month _
+                                    AndAlso Ban_hang.Ngay.Year = Ngay_Hien_hanh.Year)
+        Dim Doanh_thu = Danh_sach_Ban_hang_cua_Thang_Hien_hanh.Sum(Function(Ban_hang) Ban_hang.Tien)
+        Return Doanh_thu
+    End Function
+    Public Function Tinh_Doanh_thu_Nam_Hien_hanh_San_pham(San_pham As XL_SAN_PHAM) As Long
+        Dim Ngay_Hien_hanh = DateTime.Today
+        Dim Danh_sach_Ban_hang_cua_Nam_Hien_hanh = San_pham.Danh_sach_Ban_hang.FindAll(
+            Function(Ban_hang) Ban_hang.Ngay.Year = Ngay_Hien_hanh.Year)
+        Dim Doanh_thu = Danh_sach_Ban_hang_cua_Nam_Hien_hanh.Sum(Function(Ban_hang) Ban_hang.Tien)
+        Return Doanh_thu
+    End Function
+    Public Function Tinh_Tong_Doanh_thu_Ngay_Hien_hanh_Nhan_vien(Nguoi_dung As XL_NHAN_VIEN_BAN_HANG, Danh_sach_San_pham As List(Of XL_SAN_PHAM)) As Long
+        Danh_sach_San_pham.ForEach(
+            Sub(San_pham)
+                Dim Duoc_Phan_quyen = Nguoi_dung.Danh_sach_Nhom_San_pham.Any(Function(Nhom_San_pham) Nhom_San_pham.Ma_so = San_pham.Nhom_San_pham.Ma_so)
+                If Duoc_Phan_quyen Then
+                    Danh_sach_San_pham.Add(San_pham)
+                End If
+            End Sub)
+        Dim Doanh_thu = Danh_sach_San_pham.Sum(Function(San_pham) Tinh_Doanh_thu_Ngay_Hien_hanh_San_pham(San_pham))
+        Return Doanh_thu
+    End Function
+    Public Function Tinh_Tong_Doanh_thu_Thang_Hien_hanh_Nhan_vien(Nguoi_dung As XL_NHAN_VIEN_BAN_HANG, Danh_sach_San_pham As List(Of XL_SAN_PHAM)) As Long
+        Danh_sach_San_pham.ForEach(
+            Sub(San_pham)
+                Dim Duoc_Phan_quyen = Nguoi_dung.Danh_sach_Nhom_San_pham.Any(Function(Nhom_San_pham) Nhom_San_pham.Ma_so = San_pham.Nhom_San_pham.Ma_so)
+                If Duoc_Phan_quyen Then
+                    Danh_sach_San_pham.Add(San_pham)
+                End If
+            End Sub)
+        Dim Doanh_thu = Danh_sach_San_pham.Sum(Function(San_pham) Tinh_Doanh_thu_Thang_Hien_hanh_San_pham(San_pham))
+        Return Doanh_thu
+    End Function
+    Public Function Tinh_Tong_Doanh_thu_Nam_Hien_hanh_Nhan_vien(Nguoi_dung As XL_NHAN_VIEN_BAN_HANG, Danh_sach_San_pham As List(Of XL_SAN_PHAM)) As Long
+        Danh_sach_San_pham.ForEach(
+            Sub(San_pham)
+                Dim Duoc_Phan_quyen = Nguoi_dung.Danh_sach_Nhom_San_pham.Any(Function(Nhom_San_pham) Nhom_San_pham.Ma_so = San_pham.Nhom_San_pham.Ma_so)
+                If Duoc_Phan_quyen Then
+                    Danh_sach_San_pham.Add(San_pham)
+                End If
+            End Sub)
+        Dim Doanh_thu = Danh_sach_San_pham.Sum(Function(San_pham) Tinh_Doanh_thu_Nam_Hien_hanh_San_pham(San_pham))
+        Return Doanh_thu
+    End Function
     Public Function Tinh_So_luong_Ton_San_pham(San_pham As XL_SAN_PHAM) As Long
         Dim Tong_Ban = San_pham.Danh_sach_Ban_hang.Sum(Function(Ban_hang) Ban_hang.So_luong)
         Dim Tong_Nhap = San_pham.Danh_sach_Nhap_hang.Sum(Function(Ban_hang) Ban_hang.So_luong)
