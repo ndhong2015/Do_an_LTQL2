@@ -29,7 +29,6 @@
                    Danh_sach_San_pham_Xem = Nghiep_vu.Tra_cuu_San_pham(Chuoi_Tra_cuu, Danh_sach_San_pham)
                    Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham_Xem)
                End If
-
            End Sub
     End Sub
 

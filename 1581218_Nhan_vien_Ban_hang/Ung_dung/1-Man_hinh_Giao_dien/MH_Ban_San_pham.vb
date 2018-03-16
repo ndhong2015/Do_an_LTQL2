@@ -3,13 +3,14 @@
     Dim The_hien As New XL_THE_HIEN
     Dim Nghiep_vu As New XL_NGHIEP_VU
     Dim Luu_tru As New XL_LUU_TRU
-    Dim Du_lieu As XL_DU_LIEU = Luu_tru.Doc_Du_lieu
+    Dim Danh_sach_San_pham As List(Of XL_SAN_PHAM)
     Dim San_pham As XL_SAN_PHAM
     Dim Th_San_pham As New FlowLayoutPanel
 
 
-    Sub Khoi_dong(San_pham_Chon As XL_SAN_PHAM)
-        San_pham = Du_lieu.Danh_sach_San_pham.FirstOrDefault(Function(San_pham) San_pham.Ma_so = San_pham_Chon.Ma_so)
+    Sub Khoi_dong(San_pham_Chon As XL_SAN_PHAM, Danh_sach_San_pham As List(Of XL_SAN_PHAM))
+        Me.Danh_sach_San_pham = Danh_sach_San_pham
+        San_pham = Danh_sach_San_pham.FirstOrDefault(Function(San_pham) San_pham.Ma_so = San_pham_Chon.Ma_so)
         Me.Controls.Add(Th_San_pham)
         Th_San_pham.Dock = DockStyle.Fill
         Th_San_pham.BorderStyle = BorderStyle.FixedSingle
@@ -47,8 +48,7 @@
                     Dim Kq As String = Luu_tru.Ghi_Ban_hang_Moi(San_pham, Ban_hang)
                     If (Kq = "OK") Then
                         MessageBox.Show("Tiền :" + Ban_hang.Tien.ToString("c0", Dinh_dang_VN))
-                        Du_lieu = Luu_tru.Doc_Du_lieu
-                        Kich_hoat_MH_Xem_Danh_sach_San_pham(Du_lieu.Danh_sach_San_pham)
+                        Kich_hoat_MH_Xem_Danh_sach_San_pham(Danh_sach_San_pham)
                     Else
                         MessageBox.Show("Lỗi Hệ thống :")
                     End If

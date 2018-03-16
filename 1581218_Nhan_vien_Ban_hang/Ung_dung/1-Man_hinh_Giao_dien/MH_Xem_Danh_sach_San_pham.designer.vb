@@ -22,34 +22,30 @@ Partial Class MH_Xem_Danh_sach_San_pham
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Th_Danh_sach_San_pham = New System.Windows.Forms.ToolStrip()
+        Me.Trinh_duyet = New System.Windows.Forms.WebBrowser()
         Me.SuspendLayout()
         '
-        'Th_Danh_sach_San_pham
+        'Trinh_duyet
         '
-        Me.Th_Danh_sach_San_pham.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Th_Danh_sach_San_pham.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Th_Danh_sach_San_pham.ImageScalingSize = New System.Drawing.Size(100, 100)
-        Me.Th_Danh_sach_San_pham.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
-        Me.Th_Danh_sach_San_pham.Location = New System.Drawing.Point(0, 0)
-        Me.Th_Danh_sach_San_pham.Name = "Th_Danh_sach_San_pham"
-        Me.Th_Danh_sach_San_pham.Size = New System.Drawing.Size(641, 344)
-        Me.Th_Danh_sach_San_pham.TabIndex = 0
-        Me.Th_Danh_sach_San_pham.Text = "ToolStrip1"
+        Me.Trinh_duyet.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Trinh_duyet.Location = New System.Drawing.Point(0, 0)
+        Me.Trinh_duyet.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Trinh_duyet.Name = "Trinh_duyet"
+        Me.Trinh_duyet.Size = New System.Drawing.Size(641, 344)
+        Me.Trinh_duyet.TabIndex = 0
         '
         'MH_Xem_Danh_sach_San_pham
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.Controls.Add(Me.Th_Danh_sach_San_pham)
+        Me.Controls.Add(Me.Trinh_duyet)
         Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "MH_Xem_Danh_sach_San_pham"
         Me.Size = New System.Drawing.Size(641, 344)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Th_Danh_sach_San_pham As ToolStrip
+    Friend WithEvents Trinh_duyet As WebBrowser
 End Class

@@ -51,6 +51,11 @@ Public Class XL_NGHIEP_VU
         Dim Doanh_thu = Danh_sach_Ban_hang_cua_Ngay_Hien_hanh.Sum(Function(Ban_hang) Ban_hang.Tien)
         Return Doanh_thu
     End Function
+    Public Function Tinh_So_luong_Ton_San_pham(San_pham As XL_SAN_PHAM) As Long
+        Dim Tong_Ban = San_pham.Danh_sach_Ban_hang.Sum(Function(Ban_hang) Ban_hang.So_luong)
+        Dim Tong_Nhap = San_pham.Danh_sach_Nhap_hang.Sum(Function(Ban_hang) Ban_hang.So_luong)
+        Return Tong_Nhap - Tong_Ban
+    End Function
 End Class
 '**************** Xử lý  Lưu trữ *******************
 Public Class XL_LUU_TRU
@@ -99,6 +104,12 @@ Public Class XL_LUU_TRU
         End If
         Dim Duong_dan = Thu_muc_Media.FullName & "\" & Ma_so & Kieu_Hinh
         Kq = System.IO.File.ReadAllBytes(Duong_dan)
+        Return Kq
+    End Function
+    Public Function Doc_Chuoi_64(Ma_so As String) As String
+        Dim Kq As String = ""
+        Dim Nhi_Phan_Hinh As Byte() = Doc_Nhi_phan_Hinh(Ma_so)
+        Kq = Convert.ToBase64String(Nhi_Phan_Hinh)
         Return Kq
     End Function
 #End Region

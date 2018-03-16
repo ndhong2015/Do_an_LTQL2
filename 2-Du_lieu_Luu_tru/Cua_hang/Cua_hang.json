@@ -131,12 +131,28 @@
             "Mat_khau": "NV_6"
         }
     ],
+    "Danh_sach_Nhan_vien_Nhap_hang": [
+        {
+            "Ho_ten": "Tô Thị Bành",
+            "Ma_so": "NV_7",
+            "Ten_dang_nhap": "NV_7",
+            "Mat_khau": "NV_7"          
+        }
+    ],
+    "Danh_sach_Quan_ly_Nhap_hang": [
+        {
+            "Ho_ten": "Nguyễn Văn Đảnh",
+            "Ma_so": "NV_8",
+            "Ten_dang_nhap": "NV_8",
+            "Mat_khau": "NV_8"          
+        }
+    ],
     "Danh_sach_Quan_ly_Cua_hang": [
         {
             "Ho_ten": "Lê văn Hòa",
-            "Ma_so": "NV_7",
-            "Ten_dang_nhap": "NV_7",
-            "Mat_khau": "NV_7"
+            "Ma_so": "NV_9",
+            "Ten_dang_nhap": "NV_9",
+            "Mat_khau": "NV_9"
         }
     ]
 }
