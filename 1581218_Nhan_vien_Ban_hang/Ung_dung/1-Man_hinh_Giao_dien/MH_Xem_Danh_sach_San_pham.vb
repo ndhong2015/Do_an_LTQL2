@@ -12,6 +12,7 @@
             Sub()
                 Tai_lieu = Trinh_duyet.Document
                 If (Tai_lieu IsNot Nothing) Then
+                    Xuat_Thong_ke()
                     Xuat_Danh_sach_San_pham()
                 End If
             End Sub
@@ -28,7 +29,7 @@
                 Dim Ma_so = San_pham.Ma_so
                 Dim Don_gia_Ban = San_pham.Don_gia_Ban
                 Dim So_luong_Ton As Long = Nghiep_vu.Tinh_So_luong_Ton_San_pham(San_pham)
-                Dim Doanh_thu As Long = Nghiep_vu.Tinh_Doanh_thu_Ngay_Hien_hanh_San_pham(San_pham)
+                Dim Doanh_thu_Ngay As Long = Nghiep_vu.Tinh_Doanh_thu_Ngay_Hien_hanh_San_pham(San_pham)
                 Dim Doanh_thu_Thang As Long = Nghiep_vu.Tinh_Doanh_thu_Thang_Hien_hanh_San_pham(San_pham)
                 Dim Doanh_thu_Nam As Long = Nghiep_vu.Tinh_Doanh_thu_Nam_Hien_hanh_San_pham(San_pham)
 
@@ -44,7 +45,7 @@
                                     $"{ Ten}" +
                                      $"<br />Đơn giá Bán {  Don_gia_Ban.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br /><i><b>Số lượng Tồn {  So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
-                                     $"<br />Doanh thu {  Doanh_thu.ToString("n0", Dinh_dang_VN) }" +
+                                     $"<br />Doanh thu ngày {  Doanh_thu_Ngay.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br />Doanh thu tháng {  Doanh_thu_Thang.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br />Doanh thu năm {  Doanh_thu_Nam.ToString("n0", Dinh_dang_VN) }" +
                                      $"</div>"
@@ -59,6 +60,25 @@
                            Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham, Nguoi_dung)
                        End Sub
             End Sub)
+    End Sub
+    Sub Xuat_Thong_ke()
+        Dim Tong_So_luong_Ton As Long = Nghiep_vu.Tinh_Tong_So_luong_Ton_San_pham(Nguoi_dung, Danh_sach_San_pham)
+        Dim Tong_Doanh_thu_Ngay As Long = Nghiep_vu.Tinh_Tong_Doanh_thu_Ngay_Hien_hanh_Nhan_vien(Nguoi_dung, Danh_sach_San_pham)
+        Dim Tong_Doanh_thu_Thang As Long = Nghiep_vu.Tinh_Tong_Doanh_thu_Thang_Hien_hanh_Nhan_vien(Nguoi_dung, Danh_sach_San_pham)
+        Dim Tong_Doanh_thu_Nam As Long = Nghiep_vu.Tinh_Tong_Doanh_thu_Nam_Hien_hanh_Nhan_vien(Nguoi_dung, Danh_sach_San_pham)
+
+        Dim Dinh_dang_Trang_thai As String = ""
+
+        Dim Chuoi_Thong_tin As String = $"<div Class='text-left float-left' style='width:65%;height:100%;margin-left:10px;color: red'> " +
+                             $"<br /><i><b>Tổng Số lượng Tồn {  Tong_So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
+                             $"<br />Tổng Doanh thu ngày {  Tong_Doanh_thu_Ngay.ToString("n0", Dinh_dang_VN) }" +
+                             $"<br />Tổng Doanh thu tháng {  Tong_Doanh_thu_Thang.ToString("n0", Dinh_dang_VN) }" +
+                             $"<br />Tổng Doanh thu năm {  Tong_Doanh_thu_Nam.ToString("n0", Dinh_dang_VN) }" +
+                             $"</div>"
+
+        Dim Th_Thong_ke = Tai_lieu.CreateElement("div")
+        Th_Thong_ke.InnerHtml = Chuoi_Thong_tin
+        Tai_lieu.Body.AppendChild(Th_Thong_ke)
     End Sub
     Sub Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham As XL_SAN_PHAM, Nguoi_dung As XL_NHAN_VIEN_BAN_HANG)
         Dim Khung_Chuc_nang As Control = Me.Parent
