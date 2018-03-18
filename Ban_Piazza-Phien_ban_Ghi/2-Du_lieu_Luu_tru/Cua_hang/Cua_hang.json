@@ -1,0 +1,172 @@
+{
+    "Ten": "Ban_Piazza",
+    "Ma_so": "Ban_Piazza",
+    "Dien_thoai": "84-01868886989",
+    "Dia_chi": "827/42 Tỉnh Lộ 10,Q.Bình Tân",
+    "Mail": "huynhtrang.binh@gmail.com",
+    "Danh_sach_Nhom_San_pham": [
+        {
+            "Ten": "Piazza",
+            "Ma_so": "PIAZZA",
+            "Phan_loai": [
+                {
+                    "Ten": "Truyền thống",
+                    "Ma_so": "TRUYEN_THONG"
+                },
+                {
+                    "Ten": "Thập cẩm cao cấp",
+                    "Ma_so": "THAP_CAM_CAO_CAP"
+                },
+                {
+                    "Ten": "Hải sản cao cấp",
+                    "Ma_so": "HAI_SAN_CAO_CAP"
+                },
+                {
+                    "Ten": "Nhân nhồi",
+                    "Ma_so": "NHAN_NHOI"
+                }
+            ]
+        },
+        {
+            "Ten": "Khai vị",
+            "Ma_so": "KHAI_VI",
+            "Phan_loai": []
+        },
+        {
+            "Ten": "Salad",
+            "Ma_so": "SALAD",
+            "Phan_loai": []
+        },
+        {
+            "Ten": "Mì Ý",
+            "Ma_so": "MI_Y",
+            "Phan_loai": []
+        },
+        {
+            "Ten": "Cơm",
+            "Ma_so": "COM",
+            "Phan_loai": []
+        },
+        {
+            "Ten": "Thức uống",
+            "Ma_so": "THUC_UONG",
+            "Phan_loai": []
+        }
+    ],
+    "Danh_sach_Nhan_vien_Giao_hang": [
+        {
+            "Ho_ten": "Nguyễn Thị Thanh",
+            "Ma_so": "NV_1",
+            "Ten_dang_nhap": "NV_1",
+            "Mat_khau": "NV_1"
+        },
+        {
+            "Ho_ten": "Nguyễn Đức Vỹ",
+            "Ma_so": "NV_2",
+            "Ten_dang_nhap": "NV_2",
+            "Mat_khau": "NV_2"
+        }
+    ],
+    "Danh_sach_Quan_ly_Giao_hang": [
+        {
+            "Ho_ten": "Trần văn Nga",
+            "Ma_so": "NV_3",
+            "Ten_dang_nhap": "NV_3",
+            "Mat_khau": "NV_3"
+        }
+    ],
+    "Danh_sach_Nhan_vien_Ban_hang": [
+        {
+            "Ho_ten": "Tô thị Hảo",
+            "Ma_so": "NV_4",
+            "Ten_dang_nhap": "NV_4",
+            "Mat_khau": "NV_4",
+            "Danh_sach_Nhom_San_pham": [
+                {
+                    "Ten": "Piazza",
+                    "Ma_so": "PIAZZA",
+                    "Phan_loai": []
+                },
+                {
+                    "Ten": "Khai vị",
+                    "Ma_so": "KHAI_VI",
+                    "Phan_loai": []
+                },
+                {
+                    "Ten": "Salad",
+                    "Ma_so": "SALAD",
+                    "Phan_loai": []
+                }
+            ]
+        },
+        {
+            "Ho_ten": "Nguyên Văn Thành",
+            "Ma_so": "NV_5",
+            "Ten_dang_nhap": "NV_5",
+            "Mat_khau": "NV_5",
+            "Danh_sach_Nhom_San_pham": [
+                {
+                    "Ten": "Mì Ý",
+                    "Ma_so": "MI_Y",
+                    "Phan_loai": []
+                },
+                {
+                    "Ten": "Cơm",
+                    "Ma_so": "COM",
+                    "Phan_loai": []
+                },
+                {
+                    "Ten": "Thức uống",
+                    "Ma_so": "THUC_UONG",
+                    "Phan_loai": []
+                }
+            ]
+        }
+    ],
+    "Danh_sach_Quan_ly_Ban_hang": [
+        {
+            "Ho_ten": "Trần Thị Mai",
+            "Ma_so": "NV_6",
+            "Ten_dang_nhap": "NV_6",
+            "Mat_khau": "NV_6"
+        }
+    ],
+    "Danh_sach_Nhan_vien_Nhap_hang": [
+        {
+            "Ho_ten": "Tô Thị Bành",
+            "Ma_so": "NV_7",
+            "Ten_dang_nhap": "NV_7",
+            "Mat_khau": "NV_7"          
+        }
+    ],
+    "Danh_sach_Quan_ly_Nhap_hang": [
+        {
+            "Ho_ten": "Nguyễn Văn Đảnh",
+            "Ma_so": "NV_8",
+            "Ten_dang_nhap": "NV_8",
+            "Mat_khau": "NV_8"          
+        }
+    ],
+    "Danh_sach_Quan_ly_Cua_hang": [
+        {
+            "Ho_ten": "Lê văn Hòa",
+            "Ma_so": "NV_9",
+            "Ten_dang_nhap": "NV_9",
+            "Mat_khau": "NV_9"
+        }
+    ],
+    "Danh_sach_Khach_tham_quan": [
+        {
+            "Ho_ten": "Nguyễn Thị A",
+            "Ma_so": "KHACH_HANG_1",
+            "Ten_dang_nhap": "K_1",
+            "Mat_khau": "K_1"
+        },
+        {
+            "Ho_ten": "Nguyễn Đức Can",
+            "Ma_so": "KHACH_HANG_1",
+            "Ten_dang_nhap": "K_2",
+            "Mat_khau": "K_2"
+        }
+    ]
+}
