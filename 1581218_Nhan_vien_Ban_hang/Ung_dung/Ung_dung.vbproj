@@ -116,6 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="1-Man_hinh_Giao_dien\MH_Ban_San_pham.resx">
+      <DependentUpon>MH_Ban_San_pham.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="1-Man_hinh_Giao_dien\MH_Chinh.resx">
       <DependentUpon>MH_Chinh.vb</DependentUpon>
     </EmbeddedResource>

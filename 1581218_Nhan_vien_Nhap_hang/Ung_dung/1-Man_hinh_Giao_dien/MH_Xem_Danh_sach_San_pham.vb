@@ -11,6 +11,7 @@
             Sub()
                 Tai_lieu = Trinh_duyet.Document
                 If (Tai_lieu IsNot Nothing) Then
+                    Xuat_Thong_ke()
                     Xuat_Danh_sach_San_pham()
                 End If
             End Sub
@@ -38,6 +39,7 @@
                                     $"{ Ten}" +
                                      $"<br />Đơn giá nhập {Don_gia_Nhap.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br /><i><b>Số lượng Tồn {So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
+                                     $"<br /><i><b>Số lượng Tồn {So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
                                      $"</div>"
                 Dim Chuoi_HTML As String = $"<div class='float-left' style='width:320px;height:150px;margin-bottom:10px;margin-left:10px;{Dinh_dang_Trang_thai}' >" +
                                $"{Chuoi_Hinh}" + $"{Chuoi_Thong_tin}" +
@@ -50,6 +52,17 @@
                            Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham, Du_lieu.Danh_sach_San_pham)
                        End Sub
             End Sub)
+    End Sub
+    Sub Xuat_Thong_ke()
+        Dim Tong_So_luong_Ton As Long = Nghiep_vu.Tinh_Tong_So_luong_Ton_San_pham(Danh_sach_San_pham)
+        Dim Dinh_dang_Trang_thai As String = ""
+        Dim Chuoi_Thong_tin As String = $"<div Class='text-left float-left' style='width:65%;height:100%;margin-left:10px;color: red'> " +
+                             $"<br /><i><b>Tổng Số lượng Tồn {  Tong_So_luong_Ton.ToString("n0", Dinh_dang_VN) }<i><b>" +
+                             $"</div>"
+
+        Dim Th_Thong_ke = Tai_lieu.CreateElement("div")
+        Th_Thong_ke.InnerHtml = Chuoi_Thong_tin
+        Tai_lieu.Body.AppendChild(Th_Thong_ke)
     End Sub
     Sub Kich_hoat_Man_hinh_Xu_ly_tren_San_pham_Chon(San_pham As XL_SAN_PHAM, Danh_sach_San_pham As List(Of XL_SAN_PHAM))
         Dim Khung_Chuc_nang As Control = Me.Parent

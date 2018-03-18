@@ -56,6 +56,7 @@ Public Class XL_NHAP_HANG
     Public Don_gia, So_luong, Tien As Long
 End Class
 Public Class XL_BAN_HANG
+    Public Ho_ten_Khach_hang, Ho_ten_Nhan_vien, Dia_chi, Dien_thoai, Mail As String
     Public Ngay As DateTime = DateTime.Today
     Public Don_gia, So_luong, Tien As Long
 End Class

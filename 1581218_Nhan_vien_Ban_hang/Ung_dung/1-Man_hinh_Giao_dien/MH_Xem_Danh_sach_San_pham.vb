@@ -40,7 +40,6 @@
                 End If
                 Dim Chuoi_Hinh = $"<img src='data:image;base64,{Chuoi_64}' " +
                                  $"class='float-left' style='width:50%;height:80%;' />"
-
                 Dim Chuoi_Thong_tin As String = $"<div Class='text-left float-left' style='width:65%;height:100%;margin-left:10px;'> " +
                                     $"{ Ten}" +
                                      $"<br />Đơn giá Bán {  Don_gia_Ban.ToString("n0", Dinh_dang_VN) }" +
@@ -48,6 +47,7 @@
                                      $"<br />Doanh thu ngày {  Doanh_thu_Ngay.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br />Doanh thu tháng {  Doanh_thu_Thang.ToString("n0", Dinh_dang_VN) }" +
                                      $"<br />Doanh thu năm {  Doanh_thu_Nam.ToString("n0", Dinh_dang_VN) }" +
+                                     $"<br /><i><b><input type='button' style='Background-color:red' value='CHỌN BÁN'><i><b>" +
                                      $"</div>"
                 Dim Chuoi_HTML As String = $"<div class='float-left' style='width:320px;height:150px;margin-bottom:10px;margin-left:10px;{Dinh_dang_Trang_thai}' >" +
                                $"{Chuoi_Hinh}" + $"{Chuoi_Thong_tin}" +

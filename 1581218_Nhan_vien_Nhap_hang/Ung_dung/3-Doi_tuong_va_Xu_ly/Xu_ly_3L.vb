@@ -56,6 +56,10 @@ Public Class XL_NGHIEP_VU
         Dim Tong_Nhap = San_pham.Danh_sach_Nhap_hang.Sum(Function(Ban_hang) Ban_hang.So_luong)
         Return Tong_Nhap - Tong_Ban
     End Function
+    Public Function Tinh_Tong_So_luong_Ton_San_pham(Danh_sach_San_pham As List(Of XL_SAN_PHAM)) As Long
+        Dim Tong_So_luong_ton = Danh_sach_San_pham.Sum(Function(San_pham) Tinh_So_luong_Ton_San_pham(San_pham))
+        Return Tong_So_luong_ton
+    End Function
 End Class
 '**************** Xử lý  Lưu trữ *******************
 Public Class XL_LUU_TRU
