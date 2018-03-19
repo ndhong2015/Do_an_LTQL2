@@ -108,7 +108,7 @@
                 Dim Th_giam_So_luong_chon = Tai_lieu.CreateElement("div")
                 Th_giam_So_luong_chon.InnerHtml = "Số lượng <input type='button' style='Background-color:red' value='-'>" + $" {So_luong_chon.ToString("n0", Dinh_dang_VN) }<i><b>"
                 Tai_lieu.Body.AppendChild(Th_giam_So_luong_chon)
-
+                San_pham.So_luong = 1
                 AddHandler Th_tang_So_luong_chon.Click,
                        Sub()
                            So_luong_chon = So_luong_chon + 1
@@ -117,8 +117,10 @@
                                Th_giam_So_luong_chon.InnerHtml = "Số lượng <input type='button' style='Background-color:red' value='-'>" + $" {So_luong_chon.ToString("n0", Dinh_dang_VN) }<i><b>"
                                Th_tang_So_luong_chon.InnerHtml = ""
                                Th_tang_So_luong_chon.InnerHtml = "Số lượng <input type='button' style='Background-color:red' value='+'>" + $" {So_luong_chon.ToString("n0", Dinh_dang_VN) }<i><b>"
+                               San_pham.So_luong = So_luong_chon
                            Else
                                MessageBox.Show("Quý khách đã chọn quá số lượng tồn")
+                               So_luong_chon = So_luong_chon - 1
                            End If
                        End Sub
 
@@ -130,8 +132,10 @@
                                Th_giam_So_luong_chon.InnerHtml = "Số lượng <input type='button' style='Background-color:red' value='-'>" + $" {So_luong_chon.ToString("n0", Dinh_dang_VN) }<i><b>"
                                Th_tang_So_luong_chon.InnerHtml = ""
                                Th_tang_So_luong_chon.InnerHtml = "Số lượng <input type='button' style='Background-color:red' value='+'>" + $" {So_luong_chon.ToString("n0", Dinh_dang_VN) }<i><b>"
+                               San_pham.So_luong = So_luong_chon
                            Else
                                MessageBox.Show("Số lượng phải khác 0")
+                               So_luong_chon = So_luong_chon + 1
                            End If
                        End Sub
 

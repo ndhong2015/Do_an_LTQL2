@@ -58,6 +58,7 @@ Public Class XL_SAN_PHAM
     Public Danh_sach_Nhap_hang As New List(Of XL_NHAP_HANG)
     Public Danh_sach_Ban_hang As New List(Of XL_BAN_HANG)
     Public Danh_sach_Dat_hang As New List(Of XL_DAT_HANG)
+    Public So_luong As Long
 End Class
 
 '****** Các Đối tượng Hoạt động 

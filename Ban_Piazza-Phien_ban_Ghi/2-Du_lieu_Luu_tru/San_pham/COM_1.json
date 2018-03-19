@@ -1,1 +1,148 @@
-{"Ten":"Cơm bỏ lò giăm bông, nấm và sốt kem","Ma_so":"COM_1","Don_gia_Ban":89000,"Don_gia_Nhap":50000,"Nhom_San_pham":{"Ten":"Cơm","Ma_so":"COM","Phan_loai":[]},"Danh_sach_Nhap_hang":[{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":50000,"So_luong":1,"Tien":50000},{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":50000,"So_luong":30,"Tien":1500000}],"Danh_sach_Ban_hang":[{"Ngay":"2018-01-10T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-01-10T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-01-10T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-03-14T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-03-14T00:00:00+07:00","Don_gia":89000,"So_luong":3,"Tien":267000},{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-03-16T00:00:00+07:00","Don_gia":89000,"So_luong":2,"Tien":178000},{"Ngay":"2018-03-17T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000},{"Ngay":"2018-03-17T00:00:00+07:00","Don_gia":89000,"So_luong":1,"Tien":89000}]}
+{
+    "Ten": "Cơm bỏ lò giăm bông, nấm và sốt kem",
+    "Ma_so": "COM_1",
+    "Don_gia_Ban": 89000,
+    "Don_gia_Nhap": 50000,
+    "Nhom_San_pham": {
+        "Ten": "Cơm",
+        "Ma_so": "COM",
+        "Phan_loai": []
+    },
+    "Danh_sach_Nhap_hang": [
+        {
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 50000,
+            "So_luong": 1,
+            "Tien": 50000
+        },
+        {
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 50000,
+            "So_luong": 30,
+            "Tien": 1500000
+        }
+    ],
+    "Danh_sach_Ban_hang": [
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-01-10T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-14T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-14T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 3,
+            "Tien": 267000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-16T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 2,
+            "Tien": 178000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-17T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": null,
+            "Ho_ten_Nhan_vien": null,
+            "Dia_chi": null,
+            "Dien_thoai": null,
+            "Mail": null,
+            "Ngay": "2018-03-17T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        },
+        {
+            "Ho_ten_Khach_hang": "",
+            "Ho_ten_Nhan_vien": "Trần Thị Mai",
+            "Dia_chi": "",
+            "Dien_thoai": "",
+            "Mail": "",
+            "Ngay": "2018-03-19T00:00:00+07:00",
+            "Don_gia": 89000,
+            "So_luong": 1,
+            "Tien": 89000
+        }
+    ]
+}
