@@ -1,0 +1,21 @@
+{
+  "Ma_so": "P_4",
+  "Ngay_dat": "05/02/2017 12:00:00 AM",
+  "Ngay_giao":"05/02/2017 12:00:00 AM",
+  "Trang_thai": "CHO_GIAO_HANG",
+  "Khach_hang": {
+    "Ho_ten": "Nguyễn Thị Ngọc",
+    "Dien_thoai": "0607333311",
+    "Mail": "ndhong201@gmail.com",
+    "Dia_chi": "234 Trần hưng Đạo"
+  },
+  "Danh_sach_San_pham": [
+    {
+      "Ma_so": "B_1",
+      "Ten": "Bánh cá vị rong biển Orion Marine Boy 32g",
+      "Don_gia": "13000",
+      "So_luong": "1",
+      "Tien": "13000"
+    }
+  ]
+}
